@@ -24,17 +24,25 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/matisse3g/matisse3g-vendor.mk)
 
-# Disable RIL
+ Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.carrier=wifi-only \
-	ro.radio.noril=1
+	ro.telephony.default_network=0 \
+	telephony.lteOnGsmDevice=1 \
+	persist.data.netmgrd.qos.enable=false \
+	persist.data.qmi.adb_logmask=0 \
+	persist.radio.add_power_save=1 \
+	rild.libargs=-d /dev/smd0 \
+	rild.libpath=/system/lib/libsec-ril.so \
+	ro.telephony.ril_class=SamsungMSM8226RIL \
+	ro.telephony.ril.config=simactivation \
+	ro.use_data_netmgrd=false \
+	persist.radio.no_wait_for_card=true \
+	keyguard.no_require_sim=true
 
-# Telephony
-PRODUCT_PROPERTY_OVERRIDES += \
-	telephony.lteOnCdmaDevice=0
-
-#RIL
-BOARD_PROVIDES_LIBRIL := false
+# Data line Permissions
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.cdma.xml \
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
