@@ -18,9 +18,14 @@
 
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matisse3g
+TARGET_OTA_ASSERT_DEVICE += matissewifi,matissewifiue,matissewifix
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matisse3g_defconfig
+
+# Radio
+PRODUCT_PACKAGES += \
+    libril_shim
 
 # inherit from the proprietary version
 -include vendor/samsung/matisse3g/BoardConfigVendor.mk

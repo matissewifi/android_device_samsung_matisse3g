@@ -12,8 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common LineageOS stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cm/config/telephony.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/matisse3g/full_matisse3g.mk)
