@@ -47,8 +47,5 @@ PRODUCT_COPY_FILES += \
 # matisse-common
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
 
-# DJABHipHop Builds(Personal Build)
-#DEVICE_SUPPORT_DJ :=true
-
 # TODO: opengapps
 #$(call inherit-product, vendor/light/config/opengapps.mk)
