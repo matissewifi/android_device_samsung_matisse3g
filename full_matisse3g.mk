@@ -14,13 +14,13 @@
 # limitations under the License.
 
 # Inherit from matissewifi device
-$(call inherit-product, device/samsung/matissewifi/device.mk)
+$(call inherit-product, device/samsung/matisse3g/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := matissewifi
-PRODUCT_NAME := full_matissewifi
+PRODUCT_DEVICE := matisse3g
+PRODUCT_NAME := full_matisse3g
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-T530
+PRODUCT_MODEL := SM-T531
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
