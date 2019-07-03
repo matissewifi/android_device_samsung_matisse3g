@@ -24,7 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/matisse3g/matisse3g-vendor.mk)
 
- Radio
+# Radio
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.default_network=0 \
 	telephony.lteOnGsmDevice=1 \
