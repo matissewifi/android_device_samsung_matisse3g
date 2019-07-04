@@ -48,4 +48,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
 
 # TODO: opengapps
-#$(call inherit-product, vendor/light/config/opengapps.mk)
+$(call inherit-product, vendor/Gapps-Preloader/opengapps.mk)
