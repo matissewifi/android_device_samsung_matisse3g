@@ -22,7 +22,7 @@ LOCAL_PATH := device/samsung/matisse3g
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matisse3g/matisse3g-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/matisseg3/matisseg3-vendor.mk)
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -46,13 +46,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Data line Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.cdma.xml \
-	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml \
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.telephony.gsm.xml
 
 
 # millet-common
-$(call inherit-product, device/samsung/matisse-common/millet.mk)
+$(call inherit-product, device/samsung/matisse-common/matisse.mk)
 
 DEVICE_HAS_DATELINE := true
 
 # TODO: opengapps
 $(call inherit-product, vendor/Gapps-Preloader/opengapps.mk)
+
