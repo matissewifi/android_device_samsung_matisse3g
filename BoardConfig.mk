@@ -20,6 +20,8 @@
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matisse3g
 TARGET_OTA_ASSERT_DEVICE += matissewifi,matissewifiue,matissewifix
 
+DEVICE_PATH := device/samsung/matisse3g
+
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matisse3g_defconfig
 
