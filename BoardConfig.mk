@@ -17,8 +17,7 @@
 -include device/samsung/matisse-common/BoardConfigCommon.mk
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := matissewifi,matisse3g
-TARGET_OTA_ASSERT_DEVICE += matissewifi,matissewifiue,matissewifix
+TARGET_OTA_ASSERT_DEVICE := matisse3g
 
 DEVICE_PATH := device/samsung/matisse3g
 
